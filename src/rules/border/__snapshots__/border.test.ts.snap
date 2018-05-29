@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`border renders expected snapshot when edges is a string 1`] = `
+Object {
+  "borderLeftColor": "black",
+  "borderLeftStyle": "solid",
+  "borderLeftWidth": 1,
+  "borderRightColor": "black",
+  "borderRightStyle": "solid",
+  "borderRightWidth": 1,
+}
+`;
+
+exports[`border renders expected snapshot when edges is an array 1`] = `
+Object {
+  "borderBottomColor": "black",
+  "borderBottomStyle": "solid",
+  "borderBottomWidth": 1,
+  "borderTopColor": "black",
+  "borderTopStyle": "solid",
+  "borderTopWidth": 1,
+}
+`;
+
+exports[`border renders expected snapshot when styles are set 1`] = `
+Object {
+  "borderColor": "red",
+  "borderStyle": "dashed",
+  "borderWidth": 2,
+}
+`;
+
+exports[`border renders expected snapshot with no options 1`] = `
+Object {
+  "borderColor": "black",
+  "borderStyle": "solid",
+  "borderWidth": 1,
+}
+`;
+
+exports[`border throws error with invalid edges 1`] = `"invalid edges value"`;

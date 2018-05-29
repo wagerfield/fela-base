@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`buildMediaQueries(breakpoints) returns expected snapshots 1`] = `
+Object {
+  "aboveMobile": "@media (min-width: 321px)",
+  "aboveTablet": "@media (min-width: 721px)",
+  "belowMobile": "@media (max-width: 320px)",
+  "belowTablet": "@media (max-width: 720px)",
+}
+`;
+
+exports[`buildMediaQuery(value, below) returns expected snapshots 1`] = `"@media (max-width: 320px)"`;
+
+exports[`buildMediaQuery(value, below) returns expected snapshots 2`] = `"@media (min-width: 321px)"`;
+
+exports[`namedKeys(options) renames custom aliases 1`] = `
+Object {
+  "@supports (display: flex)": Object {
+    "color": "red",
+  },
+}
+`;
+
+exports[`namedKeys(options) renames media query aliases 1`] = `
+Object {
+  "@media (max-width: 720px)": Object {
+    "color": "red",
+  },
+  "@media (min-width: 321px)": Object {
+    "color": "red",
+  },
+}
+`;
+
+exports[`namedKeys(options) renames placeholder alias 1`] = `
+Object {
+  "::placeholder": Object {
+    "color": "red",
+  },
+}
+`;

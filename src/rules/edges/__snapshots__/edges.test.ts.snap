@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`edges renders expected snapshot when edges is a string 1`] = `
+Object {
+  "left": "foo",
+  "right": "foo",
+}
+`;
+
+exports[`edges renders expected snapshot when edges is an array 1`] = `
+Object {
+  "left": "foo",
+  "right": "foo",
+}
+`;
+
+exports[`edges renders expected snapshot when edges is an object 1`] = `
+Object {
+  "left": "foo",
+  "right": "bar",
+}
+`;
+
+exports[`edges renders expected snapshot when value is null 1`] = `Object {}`;
+
+exports[`edges renders expected snapshot with postfixed props 1`] = `
+Object {
+  "borderLeftColor": "red",
+  "borderRightColor": "red",
+}
+`;
+
+exports[`edges renders expected snapshot with prefixed props 1`] = `
+Object {
+  "paddingLeft": "10px",
+  "paddingRight": "10px",
+}
+`;
+
+exports[`edges throws error with invalid edges 1`] = `"invalid edges value"`;
+
+exports[`edges throws error with no edges 1`] = `"invalid edges value"`;

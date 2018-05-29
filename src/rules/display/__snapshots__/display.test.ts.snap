@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`display renders expected snapshots 1`] = `
+Object {
+  "display": "inline",
+}
+`;
+
+exports[`display renders expected snapshots 2`] = `
+Object {
+  "display": "block",
+}
+`;

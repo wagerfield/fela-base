@@ -1,0 +1,78 @@
+{
+  "name": "fela-base",
+  "version": "0.0.0",
+  "description": "Fela Preset & Rules",
+  "homepage": "https://github.com/wagerfield/fela-base#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagerfield/fela-base.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wagerfield/fela-base/issues"
+  },
+  "author": "Matthew Wagerfield <matthew@wagerfield.com>",
+  "license": "MIT",
+  "keywords": [
+    "fela",
+    "preset",
+    "rules"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "rimraf lib && tsc",
+    "reset": "rimraf lib coverage",
+    "lint": "tslint --fix --format codeframe 'src/**/*.ts'",
+    "format": "prettier --write '*.md' 'src/**/*.ts'",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-coverage": "jest --coverage",
+    "precommit": "npm run lint && npm run test",
+    "prepublishOnly": "npm run build"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "testRegex": ".+\\.test\\.ts$",
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.ts$": "ts-jest"
+    }
+  },
+  "dependencies": {
+    "fast-loops": "^1.0.0",
+    "fela": "^6.1.8",
+    "fela-monolithic": "^5.0.22",
+    "fela-plugin-custom-property": "^7.0.3",
+    "fela-plugin-embedded": "^5.2.8",
+    "fela-plugin-extend": "^6.0.6",
+    "fela-plugin-fallback-value": "^5.0.18",
+    "fela-plugin-friendly-pseudo-class": "^5.0.17",
+    "fela-plugin-logger": "^5.0.5",
+    "fela-plugin-lvha": "^5.0.15",
+    "fela-plugin-named-keys": "^1.0.3",
+    "fela-plugin-placeholder-prefixer": "^5.0.19",
+    "fela-plugin-prefixer": "^5.0.19",
+    "fela-plugin-unit": "^5.0.17",
+    "isobject": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/react": "^16.3.14",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.1.0",
+    "husky": "^0.14.3",
+    "jest": "^22.1.4",
+    "prettier": "^1.13.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "typescript": "^2.8.3"
+  }
+}
