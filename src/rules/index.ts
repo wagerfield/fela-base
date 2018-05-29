@@ -1,1 +1,5 @@
+export { default as border } from "./border/border"
+export { default as disc } from "./disc/disc"
 export { default as display } from "./display/display"
+export { default as edges } from "./edges/edges"
+export { default as ellipsis } from "./ellipsis/ellipsis"
