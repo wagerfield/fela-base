@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`disc renders expected snapshots 1`] = `
+Object {
+  "backgroundColor": "black",
+  "borderRadius": 20,
+  "boxSizing": "border-box",
+  "size": 40,
+}
+`;
+
+exports[`disc renders expected snapshots 2`] = `
+Object {
+  "backgroundColor": "red",
+  "borderRadius": 50,
+  "boxSizing": "border-box",
+  "size": 100,
+}
+`;
