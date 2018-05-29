@@ -17,9 +17,9 @@ import { createConfig } from "fela-base"
 const config = createConfig()
 const renderer = createRenderer(config)
 
-renderer.renderRule(() => {
-  size: 100
-})
+const rule = ({ size = 100 }) => ({ size })
+
+renderer.renderRule(rule, { size: 50 })
 ```
 
 ## Author
