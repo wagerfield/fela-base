@@ -1,6 +1,6 @@
 import disc from "./disc"
 
-describe("disc", () => {
+describe("disc(props)", () => {
   it("renders expected snapshots", () => {
     expect(disc()).toMatchSnapshot()
     expect(

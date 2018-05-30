@@ -5,7 +5,7 @@ import {
   isString,
   camelToKebab,
   kebabToCamel,
-  parseEdges,
+  parseEdge,
   wrapKey
 } from "./utils"
 
@@ -79,9 +79,9 @@ describe("wrapKey(key, prefix, postfix)", () => {
   })
 })
 
-describe("parseEdges(edges)", () => {
+describe("parseEdge(edges)", () => {
   it("returns an array of edges from a formatted string", () => {
-    expect(parseEdges("top|left|right")).toEqual([
+    expect(parseEdge("top|left|right")).toEqual([
       "top",
       "left",
       "right"
@@ -89,6 +89,6 @@ describe("parseEdges(edges)", () => {
   })
   it("returns an array of edges", () => {
     const edges = ["top", "left", "right"]
-    expect(parseEdges(edges)).toBe(edges)
+    expect(parseEdge(edges)).toBe(edges)
   })
 })

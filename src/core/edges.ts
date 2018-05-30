@@ -1,15 +1,22 @@
-export const ALL = ["top", "right", "bottom", "left"]
-export const TRB = ["top", "right", "bottom"]
-export const TLB = ["top", "left", "bottom"]
-export const LBR = ["left", "bottom", "right"]
-export const LTR = ["left", "top", "right"]
-export const BR = ["bottom", "right"]
-export const BL = ["bottom", "left"]
-export const LR = ["left", "right"]
-export const TB = ["top", "bottom"]
-export const TR = ["top", "right"]
-export const TL = ["top", "left"]
-export const B = ["bottom"]
-export const R = ["right"]
-export const L = ["left"]
-export const T = ["top"]
+import { EdgeKey, EdgeSet } from "../types"
+
+const KT: EdgeKey = "top"
+const KR: EdgeKey = "right"
+const KB: EdgeKey = "bottom"
+const KL: EdgeKey = "left"
+
+export const ALL: EdgeSet = [KT, KR, KB, KL]
+export const TRB: EdgeSet = [KT, KR, KB]
+export const TLB: EdgeSet = [KT, KL, KB]
+export const LBR: EdgeSet = [KL, KB, KR]
+export const LTR: EdgeSet = [KL, KT, KR]
+export const BR: EdgeSet = [KB, KR]
+export const BL: EdgeSet = [KB, KL]
+export const LR: EdgeSet = [KL, KR]
+export const TB: EdgeSet = [KT, KB]
+export const TR: EdgeSet = [KT, KR]
+export const TL: EdgeSet = [KT, KL]
+export const B: EdgeSet = [KB]
+export const R: EdgeSet = [KR]
+export const L: EdgeSet = [KL]
+export const T: EdgeSet = [KT]

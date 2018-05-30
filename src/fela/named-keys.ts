@@ -1,16 +1,8 @@
 import { objectReduce } from "fast-loops"
 import { TPlugin as FelaPlugin } from "fela"
 import namedKeys from "fela-plugin-named-keys"
-
 import { kebabToCamel } from "../core/utils"
-
-export interface Breakpoints {
-  [name: string]: number
-}
-
-export interface Aliases {
-  [name: string]: string
-}
+import { Aliases, Breakpoints } from "../types"
 
 export interface NamedKeysOptions {
   aliases?: Aliases
@@ -29,7 +21,7 @@ export const buildMediaQuery = (
 export const buildMediaQueries = (
   breakpoints: Breakpoints
 ) => {
-  const acc: Aliases = {}
+  const aliases: Aliases = {}
   return objectReduce(
     breakpoints,
     (result, value, key) => {
@@ -39,7 +31,7 @@ export const buildMediaQueries = (
       result[aboveKey] = buildMediaQuery(value, false)
       return result
     },
-    acc
+    aliases
   )
 }
 

@@ -1,49 +1,43 @@
-import edges from "./edges"
+import edge from "./edge"
 
-describe("edges", () => {
-  it("throws error with no edges", () => {
+describe("edge(props)", () => {
+  it("throws error with invalid edge", () => {
     expect(() => {
-      edges()
-    }).toThrowErrorMatchingSnapshot()
-  })
-
-  it("throws error with invalid edges", () => {
-    expect(() => {
-      edges({ edges: null })
+      edge({ edge: null })
     }).toThrowErrorMatchingSnapshot()
   })
 
   it("renders expected snapshot when value is null", () => {
     expect(
-      edges({
-        edges: "top",
+      edge({
+        edge: "left",
         value: null
       })
     ).toMatchSnapshot()
   })
 
-  it("renders expected snapshot when edges is a string", () => {
+  it("renders expected snapshot when edge is a string", () => {
     expect(
-      edges({
-        edges: "left|right",
+      edge({
+        edge: "left",
         value: "foo"
       })
     ).toMatchSnapshot()
   })
 
-  it("renders expected snapshot when edges is an array", () => {
+  it("renders expected snapshot when edge is an array", () => {
     expect(
-      edges({
-        edges: ["left", "right"],
+      edge({
+        edge: ["left", "right"],
         value: "foo"
       })
     ).toMatchSnapshot()
   })
 
-  it("renders expected snapshot when edges is an object", () => {
+  it("renders expected snapshot when edge is an object", () => {
     expect(
-      edges({
-        edges: {
+      edge({
+        edge: {
           left: "foo",
           right: "bar"
         }
@@ -53,9 +47,9 @@ describe("edges", () => {
 
   it("renders expected snapshot with prefixed props", () => {
     expect(
-      edges({
+      edge({
+        edge: ["left", "right"],
         value: "10px",
-        edges: "left|right",
         prefix: "padding"
       })
     ).toMatchSnapshot()
@@ -63,9 +57,9 @@ describe("edges", () => {
 
   it("renders expected snapshot with postfixed props", () => {
     expect(
-      edges({
+      edge({
+        edge: ["left", "right"],
         value: "red",
-        edges: "left|right",
         prefix: "border",
         postfix: "color"
       })

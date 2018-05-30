@@ -1,29 +1,26 @@
 import { arrayReduce } from "fast-loops"
+import { EdgeKey, EdgeSet, Style } from "../../types"
+import { ALL } from "../../core/edges"
 import {
   isArray,
-  parseEdges,
+  parseEdge,
   wrapKey
 } from "../../core/utils"
-import { ALL } from "../../core/edges"
-
-export interface BorderStyle {
-  [key: string]: any
-}
 
 export interface BorderRuleOptions {
-  edges?: string | string[]
+  edge?: EdgeKey | EdgeSet
   width?: string | number
   style?: string
   color?: string
 }
 
 export default ({
-  edges = ALL,
+  edge = ALL,
   color = "black",
   style = "solid",
   width = 1
 }: BorderRuleOptions = {}) => {
-  const keys = parseEdges(edges)
+  const keys = parseEdge(edge)
   if (isArray(keys)) {
     if (keys.length === 4) {
       return {
@@ -32,7 +29,7 @@ export default ({
         borderColor: color
       }
     } else {
-      const borderStyle: BorderStyle = {}
+      const borderStyle: Style = {}
       return arrayReduce(
         keys,
         (result, key) => {
@@ -45,6 +42,6 @@ export default ({
       )
     }
   } else {
-    throw new Error("invalid edges value")
+    throw new Error("invalid edge value")
   }
 }

@@ -1,12 +1,13 @@
 import isPlainObject = require("isobject")
 
-export const ifElse = (condition: boolean) => (
-  then: any,
-  otherwise: any
-) => (condition ? then : otherwise)
+export function ifElse(condition: boolean) {
+  return (then: any, otherwise: any) =>
+    condition ? then : otherwise
+}
 
-export const isType = (type: string) => (value: any) =>
-  typeof value === type
+export function isType(type: string) {
+  return (value: any) => typeof value === type
+}
 
 export const isNull = (value: any) => value === null
 
@@ -37,5 +38,5 @@ export const wrapKey = (
   return kebabToCamel(result)
 }
 
-export const parseEdges = (edges: any) =>
-  isString(edges) ? edges.split("|") : edges
+export const parseEdge = (edge: any) =>
+  isString(edge) ? edge.split("|") : edge

@@ -1,18 +1,13 @@
 import { TPlugin as FelaPlugin } from "fela"
-import customKeys, {
-  Config as CustomKeys
-} from "fela-plugin-custom-property"
-import { ALL } from "../core/edges"
-import { isObject } from "../core/utils"
+import customKeys from "fela-plugin-custom-property"
 import ellipsis from "../rules/ellipsis/ellipsis"
 import border from "../rules/border/border"
-import edges from "../rules/edges/edges"
+import edge from "../rules/edge/edge"
+import { CustomProps } from "../types"
+import { isObject } from "../core/utils"
+import { ALL } from "../core/edges"
 
-export {
-  Config as CustomKeys
-} from "fela-plugin-custom-property"
-
-export default (options: CustomKeys = {}): FelaPlugin =>
+export default (props?: CustomProps): FelaPlugin =>
   customKeys({
     border: (value) =>
       isObject(value) ? border(value) : { border: value },
@@ -30,16 +25,16 @@ export default (options: CustomKeys = {}): FelaPlugin =>
     }),
 
     margin: (value) =>
-      edges({
+      edge({
         prefix: "margin",
-        edges: ALL,
+        edge: ALL,
         value
       }),
 
     padding: (value) =>
-      edges({
+      edge({
         prefix: "padding",
-        edges: ALL,
+        edge: ALL,
         value
       }),
 
@@ -56,5 +51,5 @@ export default (options: CustomKeys = {}): FelaPlugin =>
       "-webkit-tap-highlight-color": value
     }),
 
-    ...options
+    ...props
   })

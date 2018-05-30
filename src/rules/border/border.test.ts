@@ -1,9 +1,9 @@
 import border from "./border"
 
-describe("border", () => {
-  it("throws error with invalid edges", () => {
+describe("border(props)", () => {
+  it("throws error with invalid edge", () => {
     expect(() => {
-      border({ edges: null })
+      border({ edge: null })
     }).toThrowErrorMatchingSnapshot()
   })
 
@@ -11,15 +11,13 @@ describe("border", () => {
     expect(border()).toMatchSnapshot()
   })
 
-  it("renders expected snapshot when edges is a string", () => {
-    expect(
-      border({ edges: "left|right" })
-    ).toMatchSnapshot()
+  it("renders expected snapshot when edge is a string", () => {
+    expect(border({ edge: "left" })).toMatchSnapshot()
   })
 
-  it("renders expected snapshot when edges is an array", () => {
+  it("renders expected snapshot when edge is an array", () => {
     expect(
-      border({ edges: ["top", "bottom"] })
+      border({ edge: ["top", "bottom"] })
     ).toMatchSnapshot()
   })
 

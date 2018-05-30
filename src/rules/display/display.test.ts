@@ -1,6 +1,6 @@
 import display from "./display"
 
-describe("display", () => {
+describe("display(props)", () => {
   it("renders expected snapshots", () => {
     expect(
       display({

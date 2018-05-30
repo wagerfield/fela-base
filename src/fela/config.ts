@@ -11,11 +11,9 @@ import unitPlugin, {
   Unit,
   UnitPerProperty
 } from "fela-plugin-unit"
-import customKeysPlugin, { CustomKeys } from "./custom-keys"
-import namedKeysPlugin, {
-  Aliases,
-  Breakpoints
-} from "./named-keys"
+import { Aliases, Breakpoints, CustomProps } from "../types"
+import customPropsPlugin from "./custom-props"
+import namedKeysPlugin from "./named-keys"
 
 export interface UnitOptions {
   unitMap: UnitPerProperty
@@ -25,8 +23,8 @@ export interface UnitOptions {
 export interface ConfigOptions {
   useMonolithicClasses?: boolean
   usePrettySelectors?: boolean
+  customProps?: CustomProps
   breakpoints?: Breakpoints
-  customKeys?: CustomKeys
   aliases?: Aliases
   units?: UnitOptions
 }
@@ -34,8 +32,8 @@ export interface ConfigOptions {
 export default ({
   useMonolithicClasses = false,
   usePrettySelectors = false,
+  customProps,
   breakpoints,
-  customKeys,
   aliases,
   units
 }: ConfigOptions = {}): FelaConfig => {
@@ -53,7 +51,7 @@ export default ({
     extendPlugin(),
     pseudoPlugin(),
     namedKeysPlugin({ aliases, breakpoints }),
-    customKeysPlugin(customKeys),
+    customPropsPlugin(customProps),
     placeholderPlugin(),
     embeddedPlugin(),
     prefixerPlugin(),

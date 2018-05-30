@@ -1,36 +1,31 @@
 import { arrayReduce, objectReduce } from "fast-loops"
+import { Edge, Style } from "../../types"
 import {
   isNull,
   isArray,
   isObject,
-  parseEdges,
+  parseEdge,
   wrapKey
 } from "../../core/utils"
 
-export interface EdgesStyle {
-  [key: string]: any
-}
-
-export type Edges = string | string[] | EdgesStyle
-
-export interface EdgesRuleOptions {
-  edges?: Edges
+export interface EdgeRuleOptions {
+  edge: Edge
   value?: any
   prefix?: string
   postfix?: string
 }
 
 export default ({
+  edge,
   value,
-  edges,
   prefix,
   postfix
-}: EdgesRuleOptions = {}) => {
-  const keys = parseEdges(edges)
-  const edgesStyle: EdgesStyle = {}
+}: EdgeRuleOptions) => {
+  const keys = parseEdge(edge)
+  const edgeStyle: Style = {}
   // Handle null values
   if (isNull(value)) {
-    return edgesStyle
+    return edgeStyle
   } else if (isArray(keys)) {
     // Process edge arrays
     return arrayReduce(
@@ -39,19 +34,19 @@ export default ({
         style[wrapKey(key, prefix, postfix)] = value
         return style
       },
-      edgesStyle
+      edgeStyle
     )
   } else if (isObject(keys)) {
     // Process edge objects
     return objectReduce(
-      keys,
+      keys as object,
       (style, keyValue, key) => {
         style[wrapKey(key, prefix, postfix)] = keyValue
         return style
       },
-      edgesStyle
+      edgeStyle
     )
   } else {
-    throw new Error("invalid edges value")
+    throw new Error("invalid edge value")
   }
 }

@@ -1,17 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`border renders expected snapshot when edges is a string 1`] = `
+exports[`border(props) renders expected snapshot when edge is a string 1`] = `
 Object {
   "borderLeftColor": "black",
   "borderLeftStyle": "solid",
   "borderLeftWidth": 1,
-  "borderRightColor": "black",
-  "borderRightStyle": "solid",
-  "borderRightWidth": 1,
 }
 `;
 
-exports[`border renders expected snapshot when edges is an array 1`] = `
+exports[`border(props) renders expected snapshot when edge is an array 1`] = `
 Object {
   "borderBottomColor": "black",
   "borderBottomStyle": "solid",
@@ -22,7 +19,7 @@ Object {
 }
 `;
 
-exports[`border renders expected snapshot when styles are set 1`] = `
+exports[`border(props) renders expected snapshot when styles are set 1`] = `
 Object {
   "borderColor": "red",
   "borderStyle": "dashed",
@@ -30,7 +27,7 @@ Object {
 }
 `;
 
-exports[`border renders expected snapshot with no options 1`] = `
+exports[`border(props) renders expected snapshot with no options 1`] = `
 Object {
   "borderColor": "black",
   "borderStyle": "solid",
@@ -38,4 +35,4 @@ Object {
 }
 `;
 
-exports[`border throws error with invalid edges 1`] = `"invalid edges value"`;
+exports[`border(props) throws error with invalid edge 1`] = `"invalid edge value"`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`disc renders expected snapshots 1`] = `
+exports[`disc(props) renders expected snapshots 1`] = `
 Object {
   "backgroundColor": "black",
   "borderRadius": 20,
@@ -9,7 +9,7 @@ Object {
 }
 `;
 
-exports[`disc renders expected snapshots 2`] = `
+exports[`disc(props) renders expected snapshots 2`] = `
 Object {
   "backgroundColor": "red",
   "borderRadius": 50,
