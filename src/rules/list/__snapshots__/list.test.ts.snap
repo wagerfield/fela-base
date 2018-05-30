@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list(props) renders expected snapshots 1`] = `
+Object {
+  "listStyle": "none",
+  "margin": 0,
+  "padding": 0,
+}
+`;
+
+exports[`list(props) renders expected snapshots 2`] = `
+Object {
+  "listStyle": "square",
+  "margin": 0,
+  "padding": 10,
+}
+`;
