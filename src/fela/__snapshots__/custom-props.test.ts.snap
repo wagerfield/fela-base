@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`customProps(props) adds custom props 1`] = `
+Object {
+  "customPropA": "duplicate",
+  "customPropB": "duplicate",
+}
+`;
+
+exports[`customProps(props) does not render ellipsis object 1`] = `Object {}`;
+
+exports[`customProps(props) renders border object 1`] = `
+Object {
+  "borderLeftColor": "blue",
+  "borderLeftStyle": "solid",
+  "borderLeftWidth": "10px",
+  "borderRightColor": "blue",
+  "borderRightStyle": "solid",
+  "borderRightWidth": "10px",
+}
+`;
+
+exports[`customProps(props) renders border value 1`] = `
+Object {
+  "border": "none",
+}
+`;
+
+exports[`customProps(props) renders ellipsis object 1`] = `
+Object {
+  "overflow": "hidden",
+  "textOverflow": "ellipsis",
+  "whiteSpace": "nowrap",
+}
+`;
+
+exports[`customProps(props) renders font feature object 1`] = `
+Object {
+  "-webkit-font-feature-settings": "liga",
+  "font-feature-settings": "liga",
+}
+`;
+
+exports[`customProps(props) renders font smoothing object 1`] = `
+Object {
+  "-moz-osx-font-smoothing": "grayscale",
+  "-webkit-font-smoothing": "antialiased",
+}
+`;
+
+exports[`customProps(props) renders margin object 1`] = `
+Object {
+  "marginBottom": 10,
+  "marginLeft": 10,
+  "marginRight": 10,
+  "marginTop": 10,
+}
+`;
+
+exports[`customProps(props) renders outline object 1`] = `
+Object {
+  "outlineColor": "blue",
+  "outlineOffset": undefined,
+  "outlineStyle": undefined,
+  "outlineWidth": "10px",
+}
+`;
+
+exports[`customProps(props) renders outline value 1`] = `
+Object {
+  "outline": "none",
+}
+`;
+
+exports[`customProps(props) renders padding object 1`] = `
+Object {
+  "paddingBottom": 10,
+  "paddingLeft": 10,
+  "paddingRight": 10,
+  "paddingTop": 10,
+}
+`;
+
+exports[`customProps(props) renders scrolling object 1`] = `
+Object {
+  "-webkit-overflow-scrolling": "touch",
+}
+`;
+
+exports[`customProps(props) renders size object 1`] = `
+Object {
+  "height": 10,
+  "width": 10,
+}
+`;
+
+exports[`customProps(props) renders tap color object 1`] = `
+Object {
+  "-webkit-tap-highlight-color": "red",
+}
+`;
