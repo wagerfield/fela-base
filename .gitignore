@@ -2,7 +2,6 @@
 node_modules
 coverage
 lib
-ref
 
 # files
 .DS_Store
