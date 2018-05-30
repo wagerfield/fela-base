@@ -23,6 +23,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "compile": "tsc --noEmit",
     "build": "rimraf lib && tsc",
     "reset": "rimraf lib coverage",
     "lint": "tslint --fix --format codeframe 'src/**/*.ts'",
@@ -30,7 +31,7 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "test-coverage": "jest --coverage",
-    "precommit": "npm run lint && npm run test && npm run build",
+    "precommit": "npm run lint && npm run test && npm run compile",
     "prepublishOnly": "npm run build"
   },
   "jest": {
