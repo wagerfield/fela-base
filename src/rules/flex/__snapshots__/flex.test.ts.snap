@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flex(props) renders expected snapshots 1`] = `
+Object {
+  "alignSelf": undefined,
+  "flexBasis": undefined,
+  "flexGrow": undefined,
+  "flexShrink": undefined,
+  "justifySelf": undefined,
+}
+`;
+
+exports[`flex(props) renders expected snapshots 2`] = `
+Object {
+  "alignSelf": undefined,
+  "flexBasis": undefined,
+  "flexGrow": 1,
+  "flexShrink": undefined,
+  "justifySelf": undefined,
+}
+`;
