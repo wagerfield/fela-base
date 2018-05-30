@@ -1,4 +1,5 @@
 export { default as border } from "./border/border"
+export { default as button } from "./button/button"
 export { default as disc } from "./disc/disc"
 export { default as display } from "./display/display"
 export { default as edge } from "./edge/edge"

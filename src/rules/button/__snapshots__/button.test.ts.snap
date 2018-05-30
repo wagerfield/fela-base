@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button(props) renders expected snapshots 1`] = `
+Object {
+  "backgroundColor": "transparent",
+  "border": "none",
+  "boxSizing": "border-box",
+  "cursor": "pointer",
+  "outline": "none",
+  "padding": 0,
+  "userSelect": "none",
+}
+`;
+
+exports[`button(props) renders expected snapshots 2`] = `
+Object {
+  "backgroundColor": "red",
+  "border": "none",
+  "boxSizing": "border-box",
+  "cursor": "pointer",
+  "outline": "none",
+  "padding": 0,
+  "userSelect": "none",
+}
+`;
