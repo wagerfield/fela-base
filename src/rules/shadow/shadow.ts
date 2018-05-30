@@ -1,10 +1,10 @@
-import { UnitValue } from "../../types"
+import { Unit } from "../../types"
 
 export interface ShadowRuleOptions {
-  x?: UnitValue
-  y?: UnitValue
-  blur?: UnitValue
-  spread?: UnitValue
+  x?: Unit
+  y?: Unit
+  blur?: Unit
+  spread?: Unit
   color?: string
 }
 
