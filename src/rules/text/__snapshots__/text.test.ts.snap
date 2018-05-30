@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`text(props) renders expected snapshots 1`] = `
+Object {
+  "color": undefined,
+  "ellipsis": undefined,
+  "fontFamily": undefined,
+  "fontSize": undefined,
+  "fontStyle": undefined,
+  "fontWeight": undefined,
+  "lineHeight": undefined,
+  "margin": undefined,
+  "textAlign": undefined,
+  "textTransform": undefined,
+}
+`;
+
+exports[`text(props) renders expected snapshots 2`] = `
+Object {
+  "color": undefined,
+  "ellipsis": undefined,
+  "fontFamily": "Helvetica",
+  "fontSize": "24px",
+  "fontStyle": undefined,
+  "fontWeight": "bold",
+  "lineHeight": undefined,
+  "margin": undefined,
+  "textAlign": undefined,
+  "textTransform": undefined,
+}
+`;
