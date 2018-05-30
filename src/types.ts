@@ -16,6 +16,8 @@ export type Ease = Record<EaseKey, string>
 
 // Style
 
+export type UnitValue = string | 0
+
 export interface Style {
   [key: string]: any
 }
