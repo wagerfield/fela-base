@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shadow(props) renders expected snapshots 1`] = `
+Object {
+  "boxShadow": "0 2px 16px 0 black",
+}
+`;
+
+exports[`shadow(props) renders expected snapshots 2`] = `
+Object {
+  "boxShadow": "4px 2px 16px 8px black",
+}
+`;
