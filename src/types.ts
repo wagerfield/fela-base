@@ -14,13 +14,19 @@ export type EaseKey = "IN" | "OUT" | "IN_OUT"
 
 export type Ease = Record<EaseKey, string>
 
-// Style
+// Fela
 
-export type UnitValue = string | 0
+export interface Props {
+  [key: string]: any
+}
 
 export interface Style {
   [key: string]: any
 }
+
+export type Rule = (props: Props) => Style
+
+export type Unit = string | 0
 
 // Config
 
