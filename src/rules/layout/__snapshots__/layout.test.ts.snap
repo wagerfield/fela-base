@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layout(props) renders expected snapshots 1`] = `
+Object {
+  "alignItems": undefined,
+  "display": "flex",
+  "flexDirection": undefined,
+  "flexWrap": undefined,
+  "justifyContent": undefined,
+}
+`;
+
+exports[`layout(props) renders expected snapshots 2`] = `
+Object {
+  "alignItems": undefined,
+  "display": "none",
+  "flexDirection": "column",
+  "flexWrap": undefined,
+  "justifyContent": undefined,
+}
+`;
