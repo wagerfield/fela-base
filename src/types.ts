@@ -12,7 +12,7 @@ export type Edge = EdgeKey | EdgeMap | EdgeSet
 
 export type EaseKey = "IN" | "OUT" | "IN_OUT"
 
-export type Ease = Record<EaseKey, string>
+export type EaseMap = Record<EaseKey, string>
 
 // Fela
 
