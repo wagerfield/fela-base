@@ -11,3 +11,6 @@ export { default as list } from "./list/list"
 export { default as outline } from "./outline/outline"
 export { default as scroll } from "./scroll/scroll"
 export { default as shadow } from "./shadow/shadow"
+export {
+  default as transition
+} from "./transition/transition"
