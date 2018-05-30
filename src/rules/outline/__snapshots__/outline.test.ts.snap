@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`outline(props) renders expected snapshots 1`] = `
+Object {
+  "outlineColor": "initial",
+  "outlineOffset": "initial",
+  "outlineStyle": "initial",
+  "outlineWidth": "initial",
+}
+`;
+
+exports[`outline(props) renders expected snapshots 2`] = `
+Object {
+  "outlineColor": "initial",
+  "outlineOffset": "initial",
+  "outlineStyle": "initial",
+  "outlineWidth": "thick",
+}
+`;
