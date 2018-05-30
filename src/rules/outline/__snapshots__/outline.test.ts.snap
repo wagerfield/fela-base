@@ -2,18 +2,18 @@
 
 exports[`outline(props) renders expected snapshots 1`] = `
 Object {
-  "outlineColor": "initial",
-  "outlineOffset": "initial",
-  "outlineStyle": "initial",
-  "outlineWidth": "initial",
+  "outlineColor": undefined,
+  "outlineOffset": undefined,
+  "outlineStyle": undefined,
+  "outlineWidth": undefined,
 }
 `;
 
 exports[`outline(props) renders expected snapshots 2`] = `
 Object {
-  "outlineColor": "initial",
-  "outlineOffset": "initial",
-  "outlineStyle": "initial",
+  "outlineColor": undefined,
+  "outlineOffset": undefined,
+  "outlineStyle": undefined,
   "outlineWidth": "thick",
 }
 `;

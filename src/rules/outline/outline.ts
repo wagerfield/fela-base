@@ -6,10 +6,10 @@ export interface OutlineRuleOptions {
 }
 
 export default ({
-  color = "initial",
-  style = "initial",
-  width = "initial",
-  offset = "initial"
+  color,
+  style,
+  width,
+  offset
 }: OutlineRuleOptions = {}) => ({
   outlineColor: color,
   outlineStyle: style,
