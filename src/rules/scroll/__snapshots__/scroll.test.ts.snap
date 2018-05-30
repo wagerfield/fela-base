@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`scroll(props) renders expected snapshots 1`] = `
+Object {
+  "overflowX": "hidden",
+  "overflowY": "auto",
+  "scrolling": "touch",
+}
+`;
+
+exports[`scroll(props) renders expected snapshots 2`] = `
+Object {
+  "overflowX": "auto",
+  "overflowY": "auto",
+  "scrolling": "touch",
+}
+`;
