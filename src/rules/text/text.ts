@@ -1,6 +1,6 @@
 import { Unit } from "../../types"
 
-export interface TextRuleOptions {
+export interface TextRuleProps {
   family?: string
   size?: string
   style?: string
@@ -24,7 +24,7 @@ export default ({
   lineHeight,
   transform,
   ellipsis
-}: TextRuleOptions = {}) => ({
+}: TextRuleProps = {}) => ({
   fontFamily: family,
   fontSize: size,
   fontStyle: style,

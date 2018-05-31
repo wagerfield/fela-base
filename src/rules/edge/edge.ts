@@ -8,7 +8,7 @@ import {
   wrapKey
 } from "../../core/utils"
 
-export interface EdgeRuleOptions {
+export interface EdgeRuleProps {
   edge: Edge
   value?: any
   prefix?: string
@@ -20,7 +20,7 @@ export default ({
   value,
   prefix,
   postfix
-}: EdgeRuleOptions) => {
+}: EdgeRuleProps) => {
   const keys = parseEdge(edge)
   const edgeStyle: Style = {}
   // Handle null values

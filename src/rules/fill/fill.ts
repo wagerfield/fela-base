@@ -2,7 +2,7 @@ import { ALL } from "../../core/edges"
 import { Edge } from "../../types"
 import edgeRule from "../edge/edge"
 
-export interface FillRuleOptions {
+export interface FillRuleProps {
   position?: string
   value?: any
   edge?: Edge
@@ -12,7 +12,7 @@ export default ({
   position = "absolute",
   value = 0,
   edge = ALL
-}: FillRuleOptions = {}) => ({
+}: FillRuleProps = {}) => ({
   position,
   ...edgeRule({ edge, value })
 })

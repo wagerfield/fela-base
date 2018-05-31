@@ -3,17 +3,17 @@
 exports[`transition(props) renders expected snapshots 1`] = `
 Object {
   "transitionDelay": undefined,
-  "transitionDuration": "0.5s",
-  "transitionProperty": "all",
-  "transitionTimingFunction": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+  "transitionDuration": undefined,
+  "transitionProperty": undefined,
+  "transitionTimingFunction": undefined,
 }
 `;
 
 exports[`transition(props) renders expected snapshots 2`] = `
 Object {
   "transitionDelay": "2s",
-  "transitionDuration": "0.5s",
+  "transitionDuration": undefined,
   "transitionProperty": "opacity",
-  "transitionTimingFunction": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+  "transitionTimingFunction": undefined,
 }
 `;

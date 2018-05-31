@@ -1,7 +1,7 @@
-export interface DisplayRuleOptions {
+export interface DisplayRuleProps {
   display?: any
 }
 
-export default ({ display }: DisplayRuleOptions = {}) => ({
+export default ({ display }: DisplayRuleProps = {}) => ({
   display
 })

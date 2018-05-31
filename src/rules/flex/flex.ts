@@ -1,4 +1,4 @@
-export interface FlexRuleOptions {
+export interface FlexRuleProps {
   grow?: any
   shrink?: any
   basis?: any
@@ -12,7 +12,7 @@ export default ({
   basis,
   align,
   justify
-}: FlexRuleOptions = {}) => ({
+}: FlexRuleProps = {}) => ({
   flexGrow: grow,
   flexShrink: shrink,
   flexBasis: basis,

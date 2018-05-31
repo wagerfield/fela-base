@@ -1,4 +1,4 @@
-export interface DiscRuleOptions {
+export interface DiscRuleProps {
   color?: string
   size?: number
 }
@@ -6,7 +6,7 @@ export interface DiscRuleOptions {
 export default ({
   color = "black",
   size = 40
-}: DiscRuleOptions = {}) => ({
+}: DiscRuleProps = {}) => ({
   borderRadius: size ? size * 0.5 : null,
   backgroundColor: color,
   boxSizing: "border-box",

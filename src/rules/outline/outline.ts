@@ -1,4 +1,4 @@
-export interface OutlineRuleOptions {
+export interface OutlineRuleProps {
   color?: string
   style?: string
   width?: string
@@ -10,7 +10,7 @@ export default ({
   style,
   width,
   offset
-}: OutlineRuleOptions = {}) => ({
+}: OutlineRuleProps = {}) => ({
   outlineColor: color,
   outlineStyle: style,
   outlineWidth: width,

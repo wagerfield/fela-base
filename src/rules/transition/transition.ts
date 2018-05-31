@@ -1,7 +1,6 @@
 import { Unit } from "../../types"
-import { QUAD } from "../../core/easing"
 
-export interface TransitionRuleOptions {
+export interface TransitionRuleProps {
   property?: string
   duration?: Unit
   delay?: Unit
@@ -9,11 +8,11 @@ export interface TransitionRuleOptions {
 }
 
 export default ({
-  property = "all",
-  duration = "0.5s",
+  property,
+  duration,
   delay,
-  easing = QUAD.OUT
-}: TransitionRuleOptions = {}) => ({
+  easing
+}: TransitionRuleProps = {}) => ({
   transitionTimingFunction: easing,
   transitionProperty: property,
   transitionDuration: duration,

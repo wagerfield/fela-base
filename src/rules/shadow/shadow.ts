@@ -1,6 +1,6 @@
 import { Unit } from "../../types"
 
-export interface ShadowRuleOptions {
+export interface ShadowRuleProps {
   x?: Unit
   y?: Unit
   blur?: Unit
@@ -14,6 +14,6 @@ export default ({
   blur = "16px",
   spread = 0,
   color = "black"
-}: ShadowRuleOptions = {}) => ({
+}: ShadowRuleProps = {}) => ({
   boxShadow: `${x} ${y} ${blur} ${spread} ${color}`
 })

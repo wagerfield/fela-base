@@ -1,4 +1,4 @@
-export interface ButtonRuleOptions {
+export interface ButtonRuleProps {
   background?: any
   userSelect?: any
   boxSizing?: any
@@ -16,7 +16,7 @@ export default ({
   padding = 0,
   border = "none",
   cursor = "pointer"
-}: ButtonRuleOptions = {}) => ({
+}: ButtonRuleProps = {}) => ({
   backgroundColor: background,
   userSelect,
   boxSizing,

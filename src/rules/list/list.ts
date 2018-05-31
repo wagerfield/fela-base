@@ -1,4 +1,4 @@
-export interface ListRuleOptions {
+export interface ListRuleProps {
   padding?: any
   margin?: any
   style?: any
@@ -8,7 +8,7 @@ export default ({
   style = "none",
   padding = 0,
   margin = 0
-}: ListRuleOptions = {}) => ({
+}: ListRuleProps = {}) => ({
   listStyle: style,
   padding,
   margin

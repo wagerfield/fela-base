@@ -1,4 +1,4 @@
-export interface LayoutRuleOptions {
+export interface LayoutRuleProps {
   display?: any
   direction?: any
   justify?: any
@@ -12,7 +12,7 @@ export default ({
   justify,
   align,
   wrap
-}: LayoutRuleOptions = {}) => ({
+}: LayoutRuleProps = {}) => ({
   display,
   flexWrap: wrap,
   flexDirection: direction,

@@ -7,7 +7,7 @@ import {
   wrapKey
 } from "../../core/utils"
 
-export interface BorderRuleOptions {
+export interface BorderRuleProps {
   edge?: EdgeKey | EdgeSet
   width?: string | number
   style?: string
@@ -19,7 +19,7 @@ export default ({
   color = "black",
   style = "solid",
   width = 1
-}: BorderRuleOptions = {}) => {
+}: BorderRuleProps = {}) => {
   const keys = parseEdge(edge)
   if (isArray(keys)) {
     if (keys.length === 4) {
