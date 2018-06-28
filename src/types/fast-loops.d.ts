@@ -13,12 +13,7 @@ declare module "fast-loops" {
 
   export function objectReduce<T, U extends object>(
     obj: U,
-    reducer: (
-      accumulator: T,
-      value: any,
-      key: string,
-      obj: U
-    ) => T,
+    reducer: (accumulator: T, value: any, key: string, obj: U) => T,
     accumulator: T
   ): T
 }

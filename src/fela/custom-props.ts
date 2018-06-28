@@ -5,9 +5,8 @@ import { CustomProps, Rule } from "../types"
 import { isObject } from "../core/utils"
 import { ALL } from "../core/edges"
 
-const customProp = (rule: Rule, key: string) => (
-  value: any
-) => (isObject(value) ? rule(value) : { [key]: value })
+const customProp = (rule: Rule, key: string) => (value: any) =>
+  isObject(value) ? rule(value) : { [key]: value }
 
 export default (props?: CustomProps): FelaPlugin =>
   customKeys({

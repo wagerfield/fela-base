@@ -19,10 +19,7 @@ const snapshotStyle = (name?: string) => (style) => {
   return style
 }
 
-const testPlugin = (
-  style: CustomStyle,
-  options?: NamedKeysOptions
-) => {
+const testPlugin = (style: CustomStyle, options?: NamedKeysOptions) => {
   createRenderer({
     plugins: [namedKeys(options), snapshotStyle()]
   }).renderRule(() => style, {})

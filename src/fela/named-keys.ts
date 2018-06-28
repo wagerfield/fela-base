@@ -9,18 +9,13 @@ export interface NamedKeysOptions {
   breakpoints?: Breakpoints
 }
 
-export const buildMediaQuery = (
-  value: number,
-  below: boolean
-) => {
+export const buildMediaQuery = (value: number, below: boolean) => {
   const prefix = below ? "max" : "min"
   const offset = below ? value : value + 1
   return `@media (${prefix}-width: ${offset}px)`
 }
 
-export const buildMediaQueries = (
-  breakpoints: Breakpoints
-) => {
+export const buildMediaQueries = (breakpoints: Breakpoints) => {
   const aliases: Aliases = {}
   return objectReduce(
     breakpoints,

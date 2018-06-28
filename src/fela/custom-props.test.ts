@@ -1,7 +1,4 @@
-import {
-  createRenderer,
-  IRenderer as FelaRenderer
-} from "fela"
+import { createRenderer, IRenderer as FelaRenderer } from "fela"
 import { CustomProps, Style } from "../types"
 import customProps from "./custom-props"
 
@@ -16,10 +13,7 @@ const createTestRenderer = (props?: CustomProps) => {
   })
 }
 
-const renderStyle = (
-  renderer: FelaRenderer,
-  style: Style
-) => {
+const renderStyle = (renderer: FelaRenderer, style: Style) => {
   renderer.renderRule(() => style, {})
 }
 
