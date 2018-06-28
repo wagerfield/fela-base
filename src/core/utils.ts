@@ -1,8 +1,8 @@
 import isPlainObject = require("isobject")
+import { Edge } from "../types"
 
 export function ifElse(condition: boolean) {
-  return (then: any, otherwise: any) =>
-    condition ? then : otherwise
+  return (then: any, otherwise: any) => (condition ? then : otherwise)
 }
 
 export function isType(type: string) {
@@ -23,11 +23,7 @@ export const camelToKebab = (value: string) =>
 export const kebabToCamel = (value: string) =>
   value.replace(/(-\w)/g, (m) => m[1].toUpperCase())
 
-export const wrapKey = (
-  key: string,
-  prefix?: string,
-  postfix?: string
-) => {
+export const wrapKey = (key: string, prefix?: string, postfix?: string) => {
   let result = key
   if (prefix) {
     result = `${prefix}-${result}`
@@ -38,5 +34,5 @@ export const wrapKey = (
   return kebabToCamel(result)
 }
 
-export const parseEdge = (edge: any) =>
-  isString(edge) ? edge.split("|") : edge
+export const parseEdge = (edge: Edge) =>
+  typeof edge === "string" ? edge.split("|") : edge

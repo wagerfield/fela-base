@@ -70,22 +70,14 @@ describe("wrapKey(key, prefix, postfix)", () => {
   it("returns expected string", () => {
     expect(wrapKey("key")).toBe("key")
     expect(wrapKey("key", "prefix")).toBe("prefixKey")
-    expect(wrapKey("key", null, "postfix")).toBe(
-      "keyPostfix"
-    )
-    expect(wrapKey("key", "prefix", "postfix")).toBe(
-      "prefixKeyPostfix"
-    )
+    expect(wrapKey("key", null, "postfix")).toBe("keyPostfix")
+    expect(wrapKey("key", "prefix", "postfix")).toBe("prefixKeyPostfix")
   })
 })
 
 describe("parseEdge(edges)", () => {
   it("returns an array of edges from a formatted string", () => {
-    expect(parseEdge("top|left|right")).toEqual([
-      "top",
-      "left",
-      "right"
-    ])
+    expect(parseEdge("top|left|right")).toEqual(["top", "left", "right"])
   })
   it("returns an array of edges", () => {
     const edges = ["top", "left", "right"]
