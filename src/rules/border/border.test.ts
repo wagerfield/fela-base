@@ -1,12 +1,6 @@
 import border from "./border"
 
 describe("border(props)", () => {
-  it("throws error with invalid edge", () => {
-    expect(() => {
-      border({ edge: null })
-    }).toThrowErrorMatchingSnapshot()
-  })
-
   it("renders expected snapshot with no options", () => {
     expect(border()).toMatchSnapshot()
   })
@@ -16,9 +10,7 @@ describe("border(props)", () => {
   })
 
   it("renders expected snapshot when edge is an array", () => {
-    expect(
-      border({ edge: ["top", "bottom"] })
-    ).toMatchSnapshot()
+    expect(border({ edge: ["top", "bottom"] })).toMatchSnapshot()
   })
 
   it("renders expected snapshot when styles are set", () => {

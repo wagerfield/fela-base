@@ -1,4 +1,5 @@
 import { Unit } from "../../types"
+import { getRuleProps } from "../defaults"
 
 export interface TextRuleProps {
   family?: string
@@ -13,26 +14,21 @@ export interface TextRuleProps {
   ellipsis?: boolean
 }
 
-export default ({
-  family,
-  size,
-  style,
-  weight,
-  color,
-  align,
-  margin,
-  lineHeight,
-  transform,
-  ellipsis
-}: TextRuleProps = {}) => ({
-  fontFamily: family,
-  fontSize: size,
-  fontStyle: style,
-  fontWeight: weight,
-  textAlign: align,
-  textTransform: transform,
-  lineHeight,
-  ellipsis,
-  margin,
-  color
-})
+export const NAME = "text"
+export const DEFAULTS = {}
+
+export default (props?: TextRuleProps) => {
+  const p = getRuleProps(NAME, DEFAULTS, props)
+  return {
+    fontFamily: p.family,
+    fontSize: p.size,
+    fontStyle: p.style,
+    fontWeight: p.weight,
+    textAlign: p.align,
+    textTransform: p.transform,
+    lineHeight: p.lineHeight,
+    ellipsis: p.ellipsis,
+    margin: p.margin,
+    color: p.color
+  }
+}

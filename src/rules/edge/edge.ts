@@ -1,52 +1,42 @@
 import { arrayReduce, objectReduce } from "fast-loops"
 import { Edge, Style } from "../../types"
-import {
-  isNull,
-  isArray,
-  isObject,
-  parseEdge,
-  wrapKey
-} from "../../core/utils"
+import { ALL } from "../../core/edges"
+import { isArray, isObject, parseEdge, wrapKey } from "../../core/utils"
+import { getRuleProps } from "../defaults"
 
 export interface EdgeRuleProps {
-  edge: Edge
+  edge?: Edge
   value?: any
   prefix?: string
   postfix?: string
 }
 
-export default ({
-  edge,
-  value,
-  prefix,
-  postfix
-}: EdgeRuleProps) => {
-  const keys = parseEdge(edge)
-  const edgeStyle: Style = {}
-  // Handle null values
-  if (isNull(value)) {
-    return edgeStyle
-  } else if (isArray(keys)) {
-    // Process edge arrays
+export const NAME = "edge"
+export const DEFAULTS = {}
+
+export default (props?: EdgeRuleProps) => {
+  const p = getRuleProps(NAME, DEFAULTS, props)
+  const keys = parseEdge(p.edge || ALL)
+  const style: Style = {}
+  if (isArray(keys)) {
     return arrayReduce(
       keys,
-      (style, key) => {
-        style[wrapKey(key, prefix, postfix)] = value
-        return style
+      (result, key) => {
+        result[wrapKey(key, p.prefix, p.postfix)] = p.value
+        return result
       },
-      edgeStyle
+      style
     )
   } else if (isObject(keys)) {
-    // Process edge objects
     return objectReduce(
-      keys as object,
-      (style, keyValue, key) => {
-        style[wrapKey(key, prefix, postfix)] = keyValue
-        return style
+      keys,
+      (result, value, key) => {
+        result[wrapKey(key, p.prefix, p.postfix)] = value
+        return result
       },
-      edgeStyle
+      style
     )
   } else {
-    throw new Error("invalid edge value")
+    return style
   }
 }

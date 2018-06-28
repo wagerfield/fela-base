@@ -20,7 +20,11 @@ Object {
 }
 `;
 
-exports[`edge(props) renders expected snapshot when value is null 1`] = `Object {}`;
+exports[`edge(props) renders expected snapshot when value is null 1`] = `
+Object {
+  "left": null,
+}
+`;
 
 exports[`edge(props) renders expected snapshot with postfixed props 1`] = `
 Object {
@@ -35,5 +39,3 @@ Object {
   "paddingRight": "10px",
 }
 `;
-
-exports[`edge(props) throws error with invalid edge 1`] = `"invalid edge value"`;

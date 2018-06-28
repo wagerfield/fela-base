@@ -1,5 +1,6 @@
 import { ALL } from "../../core/edges"
 import { Edge } from "../../types"
+import { getRuleProps } from "../defaults"
 import edgeRule from "../edge/edge"
 
 export interface FillRuleProps {
@@ -8,11 +9,20 @@ export interface FillRuleProps {
   edge?: Edge
 }
 
-export default ({
-  position = "absolute",
-  value = 0,
-  edge = ALL
-}: FillRuleProps = {}) => ({
-  position,
-  ...edgeRule({ edge, value })
-})
+export const NAME = "fill"
+export const DEFAULTS = {
+  position: "absolute",
+  value: 0,
+  edge: ALL
+}
+
+export default (props?: FillRuleProps) => {
+  const p = getRuleProps(NAME, DEFAULTS, props)
+  return {
+    position: p.position,
+    ...edgeRule({
+      edge: p.edge,
+      value: p.value
+    })
+  }
+}

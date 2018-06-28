@@ -1,4 +1,5 @@
 import { Unit } from "../../types"
+import { getRuleProps } from "../defaults"
 
 export interface TransitionRuleProps {
   property?: string
@@ -7,14 +8,15 @@ export interface TransitionRuleProps {
   easing?: string
 }
 
-export default ({
-  property,
-  duration,
-  delay,
-  easing
-}: TransitionRuleProps = {}) => ({
-  transitionTimingFunction: easing,
-  transitionProperty: property,
-  transitionDuration: duration,
-  transitionDelay: delay
-})
+export const NAME = "transition"
+export const DEFAULTS = {}
+
+export default (props?: TransitionRuleProps) => {
+  const p = getRuleProps(NAME, DEFAULTS, props)
+  return {
+    transitionTimingFunction: p.easing,
+    transitionProperty: p.property,
+    transitionDuration: p.duration,
+    transitionDelay: p.delay
+  }
+}

@@ -1,15 +1,23 @@
+import { getRuleProps } from "../defaults"
+
 export interface ScrollRuleProps {
   scrolling?: any
   x?: boolean
   y?: boolean
 }
 
-export default ({
-  scrolling = "touch",
-  x = false,
-  y = true
-}: ScrollRuleProps = {}) => ({
-  overflowX: x ? "auto" : "hidden",
-  overflowY: y ? "auto" : "hidden",
-  scrolling
-})
+export const NAME = "scroll"
+export const DEFAULTS = {
+  scrolling: "touch",
+  x: false,
+  y: true
+}
+
+export default (props?: ScrollRuleProps) => {
+  const p = getRuleProps(NAME, DEFAULTS, props)
+  return {
+    overflowX: p.x ? "auto" : "hidden",
+    overflowY: p.y ? "auto" : "hidden",
+    scrolling: p.scrolling
+  }
+}

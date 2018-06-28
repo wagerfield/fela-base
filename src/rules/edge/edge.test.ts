@@ -1,12 +1,6 @@
 import edge from "./edge"
 
 describe("edge(props)", () => {
-  it("throws error with invalid edge", () => {
-    expect(() => {
-      edge({ edge: null })
-    }).toThrowErrorMatchingSnapshot()
-  })
-
   it("renders expected snapshot when value is null", () => {
     expect(
       edge({

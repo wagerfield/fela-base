@@ -1,3 +1,5 @@
+import { getRuleProps } from "../defaults"
+
 export interface LayoutRuleProps {
   display?: any
   direction?: any
@@ -6,16 +8,18 @@ export interface LayoutRuleProps {
   wrap?: any
 }
 
-export default ({
-  display = "flex",
-  direction,
-  justify,
-  align,
-  wrap
-}: LayoutRuleProps = {}) => ({
-  display,
-  flexWrap: wrap,
-  flexDirection: direction,
-  justifyContent: justify,
-  alignItems: align
-})
+export const NAME = "layout"
+export const DEFAULTS = {
+  display: "flex"
+}
+
+export default (props?: LayoutRuleProps) => {
+  const p = getRuleProps(NAME, DEFAULTS, props)
+  return {
+    display: p.display,
+    flexWrap: p.wrap,
+    flexDirection: p.direction,
+    justifyContent: p.justify,
+    alignItems: p.align
+  }
+}

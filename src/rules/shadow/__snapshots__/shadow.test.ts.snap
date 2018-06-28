@@ -2,12 +2,12 @@
 
 exports[`shadow(props) renders expected snapshots 1`] = `
 Object {
-  "boxShadow": "0 2px 16px 0 black",
+  "boxShadow": "0 4px 8px 0 rgba(0,0,0,0.5)",
 }
 `;
 
 exports[`shadow(props) renders expected snapshots 2`] = `
 Object {
-  "boxShadow": "4px 2px 16px 8px black",
+  "boxShadow": "4px 4px 8px 8px rgba(0,0,0,0.5)",
 }
 `;
