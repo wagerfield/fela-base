@@ -1,4 +1,3 @@
-import { createRenderer } from "fela"
 import createConfig from "./config"
 
 describe("createConfig(options)", () => {

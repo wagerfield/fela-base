@@ -7,11 +7,9 @@ import pseudoPlugin from "fela-plugin-friendly-pseudo-class"
 import placeholderPlugin from "fela-plugin-placeholder-prefixer"
 import prefixerPlugin from "fela-plugin-prefixer"
 import lvhaPlugin from "fela-plugin-lvha"
-import unitPlugin, {
-  Unit,
-  UnitPerProperty
-} from "fela-plugin-unit"
-import { Aliases, Breakpoints, CustomProps } from "../types"
+import unitPlugin, { Unit, UnitPerProperty } from "fela-plugin-unit"
+import { Aliases, Breakpoints, CustomProps, RuleDefaults } from "../types"
+import { setRuleDefaults } from "../rules/defaults"
 import customPropsPlugin from "./custom-props"
 import namedKeysPlugin from "./named-keys"
 
@@ -23,6 +21,7 @@ export interface UnitOptions {
 export interface ConfigOptions {
   useMonolithicClasses?: boolean
   usePrettySelectors?: boolean
+  ruleDefaults?: RuleDefaults
   customProps?: CustomProps
   breakpoints?: Breakpoints
   aliases?: Aliases
@@ -32,11 +31,15 @@ export interface ConfigOptions {
 export default ({
   useMonolithicClasses = false,
   usePrettySelectors = false,
+  ruleDefaults,
   customProps,
   breakpoints,
   aliases,
   units
 }: ConfigOptions = {}): FelaConfig => {
+  // Set rule defaults
+  if (ruleDefaults) setRuleDefaults(ruleDefaults)
+
   // Add monolithic enhancer
   const enhancers = useMonolithicClasses
     ? [monolithic({ prettySelectors: usePrettySelectors })]
