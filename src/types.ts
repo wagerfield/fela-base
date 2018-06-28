@@ -1,3 +1,4 @@
+import { BackgroundRuleProps } from "./rules/background/background"
 import { BorderRuleProps } from "./rules/border/border"
 import { ButtonRuleProps } from "./rules/button/button"
 import { DiscRuleProps } from "./rules/disc/disc"
@@ -41,6 +42,7 @@ export interface Style {
 }
 
 export interface RuleDefaults {
+  background?: BackgroundRuleProps
   border?: BorderRuleProps
   button?: ButtonRuleProps
   disc?: DiscRuleProps

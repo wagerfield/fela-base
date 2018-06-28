@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`background(props) renders expected snapshots 1`] = `
+Object {
+  "backgroundAttachment": undefined,
+  "backgroundClip": undefined,
+  "backgroundColor": undefined,
+  "backgroundImage": undefined,
+  "backgroundOrigin": undefined,
+  "backgroundPosition": undefined,
+  "backgroundRepeat": undefined,
+  "backgroundSize": undefined,
+}
+`;
+
+exports[`background(props) renders expected snapshots 2`] = `
+Object {
+  "backgroundAttachment": undefined,
+  "backgroundClip": undefined,
+  "backgroundColor": "red",
+  "backgroundImage": undefined,
+  "backgroundOrigin": undefined,
+  "backgroundPosition": undefined,
+  "backgroundRepeat": undefined,
+  "backgroundSize": undefined,
+}
+`;
