@@ -8,6 +8,8 @@ Object {
   "backgroundImage": undefined,
   "backgroundOrigin": undefined,
   "backgroundPosition": undefined,
+  "backgroundPositionX": undefined,
+  "backgroundPositionY": undefined,
   "backgroundRepeat": undefined,
   "backgroundSize": undefined,
 }
@@ -21,6 +23,8 @@ Object {
   "backgroundImage": undefined,
   "backgroundOrigin": undefined,
   "backgroundPosition": undefined,
+  "backgroundPositionX": undefined,
+  "backgroundPositionY": undefined,
   "backgroundRepeat": undefined,
   "backgroundSize": undefined,
 }
