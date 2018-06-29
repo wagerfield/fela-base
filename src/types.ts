@@ -64,7 +64,7 @@ export type RuleName = keyof RuleDefaults
 
 export type Rule = (props: Props) => Style
 
-export type Unit = number | string
+export type Length = number | string
 
 // Config
 

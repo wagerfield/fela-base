@@ -1,11 +1,11 @@
-import { Unit } from "../../types"
+import { Length } from "../../types"
 import { getRuleProps } from "../defaults"
 
 export interface ShadowRuleProps {
-  x?: Unit
-  y?: Unit
-  blur?: Unit
-  spread?: Unit
+  x?: Length
+  y?: Length
+  blur?: Length
+  spread?: Length
   color?: string
 }
 

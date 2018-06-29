@@ -1,4 +1,4 @@
-import { Unit } from "../../types"
+import { Length } from "../../types"
 import { getRuleProps } from "../defaults"
 
 export interface TextRuleProps {
@@ -8,8 +8,8 @@ export interface TextRuleProps {
   weight?: string
   color?: string
   align?: string
-  margin?: Unit
-  lineHeight?: Unit
+  margin?: Length
+  lineHeight?: Length
   transform?: string
   ellipsis?: boolean
 }

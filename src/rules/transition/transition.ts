@@ -1,10 +1,10 @@
-import { Unit } from "../../types"
+import { Length } from "../../types"
 import { getRuleProps } from "../defaults"
 
 export interface TransitionRuleProps {
   property?: string
-  duration?: Unit
-  delay?: Unit
+  duration?: Length
+  delay?: Length
   easing?: string
 }
 
