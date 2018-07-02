@@ -1,3 +1,4 @@
+export { default as background } from "./background/background"
 export { default as border } from "./border/border"
 export { default as button } from "./button/button"
 export { default as disc } from "./disc/disc"
