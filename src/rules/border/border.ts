@@ -1,18 +1,19 @@
+import * as CSS from "csstype"
 import { arrayReduce } from "fast-loops"
-import { EdgeKey, EdgeSet, Style } from "../../types"
+import { EdgeKey, EdgeSet, Length, Style } from "../../types"
 import { ALL } from "../../core/edges"
 import { isArray, parseEdge, wrapKey } from "../../core/utils"
 import { getRuleProps } from "../defaults"
 
 export interface BorderRuleProps {
   edge?: EdgeKey | EdgeSet
-  width?: string | number
-  style?: string
-  color?: string
+  width?: CSS.BorderWidthProperty<Length>
+  style?: CSS.BorderStyleProperty
+  color?: CSS.BorderColorProperty
 }
 
 export const NAME = "border"
-export const DEFAULTS = {
+export const DEFAULTS: BorderRuleProps = {
   color: "black",
   style: "solid",
   width: 1

@@ -2,27 +2,33 @@
 
 exports[`fill(props) renders expected snapshot with edge 1`] = `
 Object {
+  "height": undefined,
   "position": "absolute",
   "top": 0,
+  "width": undefined,
 }
 `;
 
 exports[`fill(props) renders expected snapshot with no props 1`] = `
 Object {
   "bottom": 0,
+  "height": undefined,
   "left": 0,
   "position": "absolute",
   "right": 0,
   "top": 0,
+  "width": undefined,
 }
 `;
 
 exports[`fill(props) renders expected snapshot with position 1`] = `
 Object {
   "bottom": 0,
+  "height": undefined,
   "left": 0,
   "position": "fixed",
   "right": 0,
   "top": 0,
+  "width": undefined,
 }
 `;

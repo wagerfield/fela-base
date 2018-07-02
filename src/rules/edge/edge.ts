@@ -12,7 +12,7 @@ export interface EdgeRuleProps {
 }
 
 export const NAME = "edge"
-export const DEFAULTS = {}
+export const DEFAULTS: EdgeRuleProps = {}
 
 export default (props?: EdgeRuleProps) => {
   const p = getRuleProps(NAME, DEFAULTS, props)

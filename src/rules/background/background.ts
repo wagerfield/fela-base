@@ -16,7 +16,7 @@ export interface BackgroundRuleProps {
 }
 
 export const NAME = "background"
-export const DEFAULTS = {}
+export const DEFAULTS: BackgroundRuleProps = {}
 
 export default (props?: BackgroundRuleProps) => {
   const p = getRuleProps(NAME, DEFAULTS, props)

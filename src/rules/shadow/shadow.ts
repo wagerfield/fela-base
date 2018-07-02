@@ -1,3 +1,4 @@
+import * as CSS from "csstype"
 import { Length } from "../../types"
 import { getRuleProps } from "../defaults"
 
@@ -6,11 +7,11 @@ export interface ShadowRuleProps {
   y?: Length
   blur?: Length
   spread?: Length
-  color?: string
+  color?: CSS.ColorProperty
 }
 
 export const NAME = "shadow"
-export const DEFAULTS = {
+export const DEFAULTS: ShadowRuleProps = {
   x: 0,
   y: "4px",
   blur: "8px",

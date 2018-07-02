@@ -1,13 +1,14 @@
+import * as CSS from "csstype"
 import { getRuleProps } from "../defaults"
 
 export interface ScrollRuleProps {
-  scrolling?: any
+  scrolling?: CSS.WebkitOverflowScrollingProperty
   x?: boolean
   y?: boolean
 }
 
 export const NAME = "scroll"
-export const DEFAULTS = {
+export const DEFAULTS: ScrollRuleProps = {
   scrolling: "touch",
   x: false,
   y: true

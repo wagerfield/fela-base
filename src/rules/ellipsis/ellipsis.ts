@@ -1,13 +1,14 @@
+import * as CSS from "csstype"
 import { getRuleProps } from "../defaults"
 
 export interface EllipsisRuleProps {
-  textOverflow?: string
-  whiteSpace?: string
-  overflow?: string
+  textOverflow?: CSS.TextOverflowProperty
+  whiteSpace?: CSS.WhiteSpaceProperty
+  overflow?: CSS.OverflowProperty
 }
 
 export const NAME = "ellipsis"
-export const DEFAULTS = {
+export const DEFAULTS: EllipsisRuleProps = {
   textOverflow: "ellipsis",
   whiteSpace: "nowrap",
   overflow: "hidden"

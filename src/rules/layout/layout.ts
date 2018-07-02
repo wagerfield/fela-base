@@ -1,15 +1,16 @@
+import * as CSS from "csstype"
 import { getRuleProps } from "../defaults"
 
 export interface LayoutRuleProps {
-  display?: any
-  direction?: any
-  justify?: any
-  align?: any
-  wrap?: any
+  display?: CSS.DisplayProperty
+  direction?: CSS.FlexDirectionProperty
+  justify?: CSS.JustifyContentProperty
+  align?: CSS.AlignItemsProperty
+  wrap?: CSS.FlexWrapProperty
 }
 
 export const NAME = "layout"
-export const DEFAULTS = {
+export const DEFAULTS: LayoutRuleProps = {
   display: "flex"
 }
 

@@ -1,21 +1,22 @@
-import { Length } from "../../types"
+import * as CSS from "csstype"
+import { EllipsisProperty, Length } from "../../types"
 import { getRuleProps } from "../defaults"
 
 export interface TextRuleProps {
-  family?: string
-  size?: string
-  style?: string
-  weight?: string
-  color?: string
-  align?: string
-  margin?: Length
-  lineHeight?: Length
-  transform?: string
-  ellipsis?: boolean
+  family?: CSS.FontFamilyProperty
+  size?: CSS.FontSizeProperty<Length>
+  style?: CSS.FontStyleProperty
+  weight?: CSS.FontWeightProperty
+  color?: CSS.ColorProperty
+  align?: CSS.TextAlignProperty
+  margin?: CSS.MarginProperty<Length> // custom prop
+  lineHeight?: CSS.LineHeightProperty<Length>
+  transform?: CSS.TextTransformProperty
+  ellipsis?: EllipsisProperty
 }
 
 export const NAME = "text"
-export const DEFAULTS = {}
+export const DEFAULTS: TextRuleProps = {}
 
 export default (props?: TextRuleProps) => {
   const p = getRuleProps(NAME, DEFAULTS, props)

@@ -1,12 +1,14 @@
+import * as CSS from "csstype"
+import { Length } from "../../types"
 import { getRuleProps } from "../defaults"
 
 export interface DiscRuleProps {
-  color?: string
-  size?: number
+  color?: CSS.BackgroundColorProperty
+  size?: Length
 }
 
 export const NAME = "disc"
-export const DEFAULTS = {
+export const DEFAULTS: DiscRuleProps = {
   color: "black",
   size: 40
 }
@@ -14,7 +16,7 @@ export const DEFAULTS = {
 export default (props?: DiscRuleProps) => {
   const p = getRuleProps(NAME, DEFAULTS, props)
   return {
-    borderRadius: p.size ? p.size * 0.5 : null,
+    borderRadius: typeof p.size === "number" ? p.size * 0.5 : p.size,
     backgroundColor: p.color,
     boxSizing: "border-box",
     size: p.size
