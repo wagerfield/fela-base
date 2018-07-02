@@ -1,6 +1,6 @@
 import { TPlugin as FelaPlugin } from "fela"
 import customKeys from "fela-plugin-custom-property"
-import { border, edge, ellipsis, outline } from "../rules"
+import { background, border, edge, ellipsis, outline } from "../rules"
 import { CustomProps, Rule } from "../types"
 import { isObject } from "../core/utils"
 import { ALL } from "../core/edges"
@@ -10,11 +10,14 @@ const customProp = (rule: Rule, key: string) => (value: any) =>
 
 export default (props?: CustomProps): FelaPlugin =>
   customKeys({
+    background: customProp(background, "background"),
+
     border: customProp(border, "border"),
 
     outline: customProp(outline, "outline"),
 
-    ellipsis: (value) => (value ? ellipsis() : {}),
+    ellipsis: (value) =>
+      isObject(value) ? ellipsis(value) : value === true ? ellipsis() : {},
 
     fontFeatures: (value) => ({
       "-webkit-font-feature-settings": value,
