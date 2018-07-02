@@ -1,3 +1,4 @@
+import * as CSS from "csstype"
 import { BackgroundRuleProps } from "./rules/background/background"
 import { BorderRuleProps } from "./rules/border/border"
 import { ButtonRuleProps } from "./rules/button/button"
@@ -15,22 +16,6 @@ import { ShadowRuleProps } from "./rules/shadow/shadow"
 import { TextRuleProps } from "./rules/text/text"
 import { TransitionRuleProps } from "./rules/transition/transition"
 
-// Edge
-
-export type EdgeKey = "top" | "right" | "bottom" | "left"
-
-export type EdgeMap = Partial<Record<EdgeKey, any>>
-
-export type EdgeSet = EdgeKey[]
-
-export type Edge = EdgeKey | EdgeMap | EdgeSet
-
-// Ease
-
-export type EaseKey = "IN" | "OUT" | "IN_OUT"
-
-export type EaseMap = Record<EaseKey, string>
-
 // Fela
 
 export interface Props {
@@ -40,6 +25,24 @@ export interface Props {
 export interface Style {
   [key: string]: any
 }
+
+// Edges
+
+export type EdgeKey = "top" | "right" | "bottom" | "left"
+
+export type EdgeMap = Partial<Record<EdgeKey, any>>
+
+export type EdgeSet = EdgeKey[]
+
+export type Edge = EdgeKey | EdgeMap | EdgeSet
+
+// Easing
+
+export type EaseKey = "IN" | "OUT" | "IN_OUT"
+
+export type EaseMap = Record<EaseKey, string>
+
+// Rules
 
 export interface RuleDefaults {
   background?: BackgroundRuleProps
@@ -64,9 +67,15 @@ export type RuleName = keyof RuleDefaults
 
 export type Rule = (props: Props) => Style
 
+// Custom Properties
+
 export type Length = number | string
 
-// Config
+export type Value = CSS.Globals | Length | "auto"
+
+export type EllipsisProperty = EllipsisRuleProps | boolean
+
+// Config Properties
 
 export interface Aliases {
   [name: string]: string
