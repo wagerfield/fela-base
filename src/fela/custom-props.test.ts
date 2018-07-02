@@ -36,6 +36,21 @@ describe("customProps(props)", () => {
     })
   })
 
+  it("renders background value", () => {
+    renderStyle(renderer, {
+      background: "red"
+    })
+  })
+
+  it("renders background object", () => {
+    renderStyle(renderer, {
+      background: {
+        color: "blue",
+        repeat: "no-repeat"
+      }
+    })
+  })
+
   it("renders border value", () => {
     renderStyle(renderer, {
       border: "none"
@@ -67,9 +82,17 @@ describe("customProps(props)", () => {
     })
   })
 
-  it("renders ellipsis object", () => {
+  it("renders default ellipsis object", () => {
     renderStyle(renderer, {
       ellipsis: true
+    })
+  })
+
+  it("renders custom ellipsis object", () => {
+    renderStyle(renderer, {
+      ellipsis: {
+        overflow: "visible"
+      }
     })
   })
 

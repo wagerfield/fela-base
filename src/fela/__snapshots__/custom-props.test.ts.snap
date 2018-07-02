@@ -9,6 +9,27 @@ Object {
 
 exports[`customProps(props) does not render ellipsis object 1`] = `Object {}`;
 
+exports[`customProps(props) renders background object 1`] = `
+Object {
+  "backgroundAttachment": undefined,
+  "backgroundClip": undefined,
+  "backgroundColor": "blue",
+  "backgroundImage": undefined,
+  "backgroundOrigin": undefined,
+  "backgroundPosition": undefined,
+  "backgroundPositionX": undefined,
+  "backgroundPositionY": undefined,
+  "backgroundRepeat": "no-repeat",
+  "backgroundSize": undefined,
+}
+`;
+
+exports[`customProps(props) renders background value 1`] = `
+Object {
+  "background": "red",
+}
+`;
+
 exports[`customProps(props) renders border object 1`] = `
 Object {
   "borderLeftColor": "blue",
@@ -26,7 +47,15 @@ Object {
 }
 `;
 
-exports[`customProps(props) renders ellipsis object 1`] = `
+exports[`customProps(props) renders custom ellipsis object 1`] = `
+Object {
+  "overflow": "visible",
+  "textOverflow": "ellipsis",
+  "whiteSpace": "nowrap",
+}
+`;
+
+exports[`customProps(props) renders default ellipsis object 1`] = `
 Object {
   "overflow": "hidden",
   "textOverflow": "ellipsis",
