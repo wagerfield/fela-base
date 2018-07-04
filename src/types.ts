@@ -73,7 +73,21 @@ export type Length = number | string
 
 export type Value = CSS.Globals | Length | "auto"
 
+export type BackgroundProperty =
+  | BackgroundRuleProps
+  | CSS.BackgroundProperty<Length>
+
+export type BorderProperty = BorderRuleProps | CSS.BorderProperty<Length>
+
 export type EllipsisProperty = EllipsisRuleProps | boolean
+
+export type OutlineProperty = OutlineRuleProps | CSS.OutlineProperty<Length>
+
+type Margin = CSS.MarginProperty<Length>
+export type MarginProperty = Margin | Partial<Record<EdgeKey, Margin>>
+
+type Padding = CSS.PaddingProperty<Length>
+export type PaddingProperty = Padding | Partial<Record<EdgeKey, Padding>>
 
 // Config Properties
 
