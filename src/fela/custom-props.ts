@@ -8,6 +8,13 @@ import { ALL } from "../core/edges"
 const customProp = (rule: Rule, key: string) => (value: any) =>
   isObject(value) ? rule(value) : { [key]: value }
 
+const customEdge = (key: string) => (value: any) =>
+  edge({
+    edge: isObject(value) ? value : ALL,
+    prefix: key,
+    value
+  })
+
 export default (props?: CustomProps): FelaPlugin =>
   customKeys({
     background: customProp(background, "background"),
@@ -15,6 +22,10 @@ export default (props?: CustomProps): FelaPlugin =>
     border: customProp(border, "border"),
 
     outline: customProp(outline, "outline"),
+
+    margin: customEdge("margin"),
+
+    padding: customEdge("padding"),
 
     ellipsis: (value) =>
       isObject(value) ? ellipsis(value) : value === true ? ellipsis() : {},
@@ -28,20 +39,6 @@ export default (props?: CustomProps): FelaPlugin =>
       "-webkit-font-smoothing": value,
       "-moz-osx-font-smoothing": "grayscale"
     }),
-
-    margin: (value) =>
-      edge({
-        prefix: "margin",
-        edge: ALL,
-        value
-      }),
-
-    padding: (value) =>
-      edge({
-        prefix: "padding",
-        edge: ALL,
-        value
-      }),
 
     scrolling: (value) => ({
       "-webkit-overflow-scrolling": value

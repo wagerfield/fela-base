@@ -114,15 +114,33 @@ describe("customProps(props)", () => {
     })
   })
 
-  it("renders margin object", () => {
+  it("renders margin value", () => {
     renderStyle(renderer, {
       margin: 10
     })
   })
 
-  it("renders padding object", () => {
+  it("renders margin object", () => {
+    renderStyle(renderer, {
+      margin: {
+        right: 20,
+        top: 10
+      }
+    })
+  })
+
+  it("renders padding value", () => {
     renderStyle(renderer, {
       padding: 10
+    })
+  })
+
+  it("renders padding object", () => {
+    renderStyle(renderer, {
+      padding: {
+        right: 20,
+        top: 10
+      }
     })
   })
 

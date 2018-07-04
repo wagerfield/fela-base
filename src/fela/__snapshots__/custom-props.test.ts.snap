@@ -79,6 +79,13 @@ Object {
 
 exports[`customProps(props) renders margin object 1`] = `
 Object {
+  "marginRight": 20,
+  "marginTop": 10,
+}
+`;
+
+exports[`customProps(props) renders margin value 1`] = `
+Object {
   "marginBottom": 10,
   "marginLeft": 10,
   "marginRight": 10,
@@ -102,6 +109,13 @@ Object {
 `;
 
 exports[`customProps(props) renders padding object 1`] = `
+Object {
+  "paddingRight": 20,
+  "paddingTop": 10,
+}
+`;
+
+exports[`customProps(props) renders padding value 1`] = `
 Object {
   "paddingBottom": 10,
   "paddingLeft": 10,
