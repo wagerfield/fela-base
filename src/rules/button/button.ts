@@ -1,14 +1,19 @@
 import * as CSS from "csstype"
-import { Length } from "../../types"
+import {
+  BackgroundProperty,
+  BorderProperty,
+  OutlineProperty,
+  PaddingProperty
+} from "../../types"
 import { getRuleProps } from "../defaults"
 
 export interface ButtonRuleProps {
-  background?: CSS.BackgroundColorProperty // custom prop
+  background?: BackgroundProperty
   userSelect?: CSS.UserSelectProperty
   boxSizing?: CSS.BoxSizingProperty
-  outline?: CSS.OutlineProperty<Length> // custom prop
-  padding?: CSS.PaddingProperty<Length> // custom prop
-  border?: CSS.BorderProperty<Length> // custom prop
+  outline?: OutlineProperty
+  padding?: PaddingProperty
+  border?: BorderProperty
   cursor?: CSS.CursorProperty
 }
 
@@ -25,7 +30,7 @@ export const DEFAULTS: ButtonRuleProps = {
 export default (props?: ButtonRuleProps) => {
   const p = getRuleProps(NAME, DEFAULTS, props)
   return {
-    backgroundColor: p.background,
+    background: p.background,
     userSelect: p.userSelect,
     boxSizing: p.boxSizing,
     outline: p.outline,

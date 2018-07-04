@@ -2,7 +2,7 @@
 
 exports[`button(props) renders expected snapshots 1`] = `
 Object {
-  "backgroundColor": "#DDD",
+  "background": "#DDD",
   "border": "none",
   "boxSizing": "border-box",
   "cursor": "pointer",
@@ -14,7 +14,7 @@ Object {
 
 exports[`button(props) renders expected snapshots 2`] = `
 Object {
-  "backgroundColor": "red",
+  "background": "red",
   "border": "none",
   "boxSizing": "border-box",
   "cursor": "pointer",

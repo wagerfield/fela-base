@@ -1,10 +1,10 @@
 import * as CSS from "csstype"
-import { Length } from "../../types"
+import { MarginProperty, PaddingProperty } from "../../types"
 import { getRuleProps } from "../defaults"
 
 export interface ListRuleProps {
-  padding?: CSS.PaddingProperty<Length> // custom prop
-  margin?: CSS.MarginProperty<Length> // custom prop
+  padding?: PaddingProperty
+  margin?: MarginProperty
   style?: CSS.ListStyleProperty
 }
 

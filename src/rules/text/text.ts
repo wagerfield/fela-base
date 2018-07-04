@@ -1,5 +1,5 @@
 import * as CSS from "csstype"
-import { EllipsisProperty, Length } from "../../types"
+import { EllipsisProperty, MarginProperty, Length } from "../../types"
 import { getRuleProps } from "../defaults"
 
 export interface TextRuleProps {
@@ -9,7 +9,7 @@ export interface TextRuleProps {
   weight?: CSS.FontWeightProperty
   color?: CSS.ColorProperty
   align?: CSS.TextAlignProperty
-  margin?: CSS.MarginProperty<Length> // custom prop
+  margin?: MarginProperty
   lineHeight?: CSS.LineHeightProperty<Length>
   transform?: CSS.TextTransformProperty
   ellipsis?: EllipsisProperty
