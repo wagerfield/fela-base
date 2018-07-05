@@ -108,9 +108,15 @@ describe("customProps(props)", () => {
     })
   })
 
-  it("renders font smoothing object", () => {
+  it("renders antialiased font smoothing object", () => {
     renderStyle(renderer, {
       fontSmoothing: "antialiased"
+    })
+  })
+
+  it("renders auto font smoothing object", () => {
+    renderStyle(renderer, {
+      fontSmoothing: "auto"
     })
   })
 

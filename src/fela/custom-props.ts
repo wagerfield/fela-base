@@ -1,9 +1,18 @@
 import { TPlugin as FelaPlugin } from "fela"
 import customKeys from "fela-plugin-custom-property"
-import { background, border, edge, ellipsis, outline } from "../rules"
-import { CustomProps, Rule } from "../types"
-import { isObject } from "../core/utils"
 import { ALL } from "../core/edges"
+import { isObject } from "../core/utils"
+import { background, border, edge, ellipsis, outline } from "../rules"
+import {
+  Rule,
+  CustomProps,
+  EllipsisProperty,
+  FontFeaturesProperty,
+  FontSmoothingProperty,
+  ScrollingProperty,
+  SizeProperty,
+  TapColorProperty
+} from "../types"
 
 const customProp = (rule: Rule, key: string) => (value: any) =>
   isObject(value) ? rule(value) : { [key]: value }
@@ -27,29 +36,33 @@ export default (props?: CustomProps): FelaPlugin =>
 
     padding: customEdge("padding"),
 
-    ellipsis: (value) =>
-      isObject(value) ? ellipsis(value) : value === true ? ellipsis() : {},
+    ellipsis: (value: EllipsisProperty) =>
+      value === true
+        ? ellipsis()
+        : typeof value === "object"
+          ? ellipsis(value)
+          : {},
 
-    fontFeatures: (value) => ({
+    fontFeatures: (value: FontFeaturesProperty) => ({
       "-webkit-font-feature-settings": value,
       "font-feature-settings": value
     }),
 
-    fontSmoothing: (value) => ({
+    fontSmoothing: (value: FontSmoothingProperty) => ({
       "-webkit-font-smoothing": value,
-      "-moz-osx-font-smoothing": "grayscale"
+      "-moz-osx-font-smoothing": value === "antialiased" ? "grayscale" : "auto"
     }),
 
-    scrolling: (value) => ({
+    scrolling: (value: ScrollingProperty) => ({
       "-webkit-overflow-scrolling": value
     }),
 
-    size: (value) => ({
+    size: (value: SizeProperty) => ({
       width: value,
       height: value
     }),
 
-    tapColor: (value) => ({
+    tapColor: (value: TapColorProperty) => ({
       "-webkit-tap-highlight-color": value
     }),
 

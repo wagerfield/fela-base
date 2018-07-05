@@ -9,6 +9,20 @@ Object {
 
 exports[`customProps(props) does not render ellipsis object 1`] = `Object {}`;
 
+exports[`customProps(props) renders antialiased font smoothing object 1`] = `
+Object {
+  "-moz-osx-font-smoothing": "grayscale",
+  "-webkit-font-smoothing": "antialiased",
+}
+`;
+
+exports[`customProps(props) renders auto font smoothing object 1`] = `
+Object {
+  "-moz-osx-font-smoothing": "auto",
+  "-webkit-font-smoothing": "auto",
+}
+`;
+
 exports[`customProps(props) renders background object 1`] = `
 Object {
   "backgroundAttachment": undefined,
@@ -67,13 +81,6 @@ exports[`customProps(props) renders font feature object 1`] = `
 Object {
   "-webkit-font-feature-settings": "liga",
   "font-feature-settings": "liga",
-}
-`;
-
-exports[`customProps(props) renders font smoothing object 1`] = `
-Object {
-  "-moz-osx-font-smoothing": "grayscale",
-  "-webkit-font-smoothing": "antialiased",
 }
 `;
 
