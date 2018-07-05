@@ -34,3 +34,5 @@ Object {
   "borderWidth": 1,
 }
 `;
+
+exports[`border(props) throws error with invalid edge value 1`] = `"Invalid edge value"`;

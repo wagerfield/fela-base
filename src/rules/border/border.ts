@@ -2,7 +2,7 @@ import * as CSS from "csstype"
 import { arrayReduce } from "fast-loops"
 import { EdgeKey, EdgeSet, Length, Style } from "../../types"
 import { ALL } from "../../core/edges"
-import { isArray, parseEdge, wrapKey } from "../../core/utils"
+import { isArray, isEdge, parseEdge, wrapKey } from "../../core/utils"
 import { getRuleProps } from "../defaults"
 
 export interface BorderRuleProps {
@@ -20,9 +20,11 @@ export const DEFAULTS: BorderRuleProps = {
 }
 
 const setEdge = (props: BorderRuleProps) => (style: Style, key: EdgeKey) => {
-  style[wrapKey(key, "border", "color")] = props.color
-  style[wrapKey(key, "border", "style")] = props.style
-  style[wrapKey(key, "border", "width")] = props.width
+  if (isEdge(key)) {
+    style[wrapKey(key, "border", "color")] = props.color
+    style[wrapKey(key, "border", "style")] = props.style
+    style[wrapKey(key, "border", "width")] = props.width
+  }
   return style
 }
 
@@ -40,6 +42,6 @@ export default (props?: BorderRuleProps) => {
       return arrayReduce(keys, setEdge(p), style)
     }
   } else {
-    return style
+    throw new Error("Invalid edge value")
   }
 }
