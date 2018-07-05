@@ -30,11 +30,11 @@ export interface Style {
 
 export type EdgeKey = "top" | "right" | "bottom" | "left"
 
-export type EdgeMap = Partial<Record<EdgeKey, any>>
+export type EdgeMap<T> = Partial<Record<EdgeKey, T>>
 
 export type EdgeSet = EdgeKey[]
 
-export type Edge = EdgeKey | EdgeMap | EdgeSet
+export type Edge<T> = EdgeKey | EdgeSet | EdgeMap<T>
 
 // Easing
 
@@ -82,6 +82,8 @@ export type BorderProperty = BorderRuleProps | CSS.BorderProperty<Length>
 export type EllipsisProperty = EllipsisRuleProps | boolean
 
 export type OutlineProperty = OutlineRuleProps | CSS.OutlineProperty<Length>
+
+export type SizeProperty = Length
 
 type Margin = CSS.MarginProperty<Length>
 export type MarginProperty = Margin | Partial<Record<EdgeKey, Margin>>
