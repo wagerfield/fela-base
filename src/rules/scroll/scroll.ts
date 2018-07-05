@@ -1,8 +1,8 @@
-import * as CSS from "csstype"
+import { ScrollingProperty } from "../../types"
 import { getRuleProps } from "../defaults"
 
 export interface ScrollRuleProps {
-  scrolling?: CSS.WebkitOverflowScrollingProperty
+  scrolling?: ScrollingProperty
   x?: boolean
   y?: boolean
 }
