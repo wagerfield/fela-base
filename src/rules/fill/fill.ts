@@ -9,7 +9,7 @@ export interface FillRuleProps {
   width?: CSS.WidthProperty<Length>
   height?: CSS.HeightProperty<Length>
   value?: Value
-  edge?: Edge
+  edge?: Edge<Value>
 }
 
 export const NAME = "fill"
