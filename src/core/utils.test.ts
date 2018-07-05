@@ -1,5 +1,6 @@
 import {
   ifElse,
+  isEdge,
   isType,
   isNull,
   isString,
@@ -50,6 +51,16 @@ describe("isString(value)", () => {
   })
   it("returns false for incorrect type", () => {
     expect(isString(1)).toBe(false)
+  })
+})
+
+describe("isEdge(value)", () => {
+  it("returns true for correct type", () => {
+    expect(isEdge("top")).toBe(true)
+  })
+  it("returns false for incorrect type", () => {
+    expect(isEdge(JSON.parse('"middle"'))).toBe(false)
+    expect(isEdge(JSON.parse('["top"]'))).toBe(false)
   })
 })
 
