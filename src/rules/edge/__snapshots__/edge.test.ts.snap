@@ -39,3 +39,5 @@ Object {
   "paddingRight": "10px",
 }
 `;
+
+exports[`edge(props) throws error with invalid edge value 1`] = `"Invalid edge value"`;
