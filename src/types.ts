@@ -81,9 +81,21 @@ export type BorderProperty = BorderRuleProps | CSS.BorderProperty<Length>
 
 export type EllipsisProperty = EllipsisRuleProps | boolean
 
+export type FontFeaturesProperty = CSS.FontFeatureSettingsProperty
+
+export type FontSmoothingProperty =
+  | "auto"
+  | "none"
+  | "antialiased"
+  | "subpixel-antialiased"
+
 export type OutlineProperty = OutlineRuleProps | CSS.OutlineProperty<Length>
 
+export type ScrollingProperty = CSS.WebkitOverflowScrollingProperty
+
 export type SizeProperty = Length
+
+export type TapColorProperty = CSS.WebkitTapHighlightColorProperty
 
 type Margin = CSS.MarginProperty<Length>
 export type MarginProperty = Margin | Partial<Record<EdgeKey, Margin>>
