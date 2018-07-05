@@ -1,10 +1,10 @@
 import * as CSS from "csstype"
-import { Length } from "../../types"
+import { SizeProperty } from "../../types"
 import { getRuleProps } from "../defaults"
 
 export interface DiscRuleProps {
   color?: CSS.BackgroundColorProperty
-  size?: Length
+  size?: SizeProperty
 }
 
 export const NAME = "disc"
